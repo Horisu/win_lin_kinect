@@ -14,6 +14,7 @@ def on_connect(client, userdata, flags, respons_code):
     client.subscribe(topic)
 
 def on_message(client, userdata, mqttmsg):
+    print(mqttmsg.topic + ' ' + str(datetime.datetime.now()))
     image = Image()
     image.header.frame_id = frame
     image.header.stamp = rospy.get_rostime()
