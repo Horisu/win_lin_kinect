@@ -8,6 +8,11 @@
      <param name="ip" value="$(arg host)"/>
      <param name="frame" value="$(arg frame)"/>
   </node>
+  <node name="kinect_image_stream" pkg="linux_kinect"
+        type="kinect_image_stream.py" output="screen">
+     <param name="ip" value="$(arg host)"/>
+     <param name="frame" value="$(arg frame)"/>
+  </node>
   <node name="kinect_camerainfo_stream" pkg="linux_kinect"
         type="kinect_camerainfo_stream.py" output="screen">
      <param name="ip" value="$(arg host)"/>
